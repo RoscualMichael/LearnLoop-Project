@@ -1,116 +1,161 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-body {
-  background: #f4f4f4;
-  margin: 0;
- 
+body{
+    background:#F3F4F6;
 }
 
-/* Login Container */
-#container {
-  width: 350px;
-  background: #fff;
-  padding: 35px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  text-align: center;
+/* ===========================
+   LOGIN & REGISTER
+=========================== */
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+#container{
+    width:400px;
+    margin:80px auto;
+    background:#FFFFFF;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    text-align:center;
 }
 
-/* Title */
-#container h1 {
-  font-size: 32px;
-  color: #222;
-  margin-bottom: 8px;
+#container h1{
+    font-size:38px;
+    color:#111827;
+    margin-bottom:8px;
 }
 
-#container h3 {
-  color: #777;
-  margin-bottom: 25px;
-  font-weight: 500;
+#container h3{
+    color:#6B7280;
+    margin-bottom:25px;
 }
 
-/* Inputs */
-#container input {
-  width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 15px;
-  outline: none;
-  transition: 0.3s;
-  BACKGROUND-COLOR: #b09f9f;
+#container input{
+    width:100%;
+    padding:13px;
+    margin:10px 0;
+    border:1px solid #D1D5DB;
+    border-radius:8px;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
 }
 
-#container input:focus {
-  border-color: #000;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  
+#container input:focus{
+    border:2px solid #F97316;
 }
 
-/* Button */
-#container button {
-  width: 50%;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  background: #323628;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
+#container button{
+    width:100%;
+    padding:13px;
+    margin-top:15px;
+    border:none;
+    border-radius:8px;
+    background:#F97316;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
 }
 
-#container button:hover {
-  background: #333;
-  transform: translateY(-2px);
+#container button:hover{
+    background:#EA580C;
 }
 
-#container button:active {
-  transform: scale(0.98);
+/* ===========================
+   ADMIN HOME
+=========================== */
+
+#homecontainer{
+    padding:40px;
+    min-height:100vh;
+    background:#F3F4F6;
 }
 
-h1{
-  margin-left:20px;
-  margin-top:20px;
+#homecontainer h1{
+    color:#111827;
+    margin-bottom:30px;
 }
+
+/* ===========================
+   DASHBOARD CARDS
+=========================== */
+
 .cards{
-  display:flex;
-  gap:20px;
-  margin:20px 0;
-  margin-left:20px;
- 
+    display:flex;
+    gap:20px;
+    margin-bottom:30px;
+    flex-wrap:wrap;
 }
 
 .card{
-  width:180px;
-  padding:20px;
-  background:white;
-  border-radius:12px;
-  box-shadow:0 2px 8px rgba(0,0,0,.2);
-  text-align:center;
+    flex:1;
+    min-width:220px;
+    background:#FFFFFF;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    font-size:40px;
+    color:#F97316;
+}
+
+.card p{
+    margin-top:8px;
+    color:#6B7280;
+    font-size:17px;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
 .buttons{
-  margin-bottom:20px;
+    margin-bottom:30px;
 }
 
 .buttons button{
-  margin-right:10px;
-  margin-left:20px;
-  border-radius:8px;
-  padding:10px 20px;
+    padding:12px 22px;
+    margin-right:10px;
+    margin-bottom:10px;
+    border:none;
+    border-radius:8px;
+    background:#111827;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
 }
 
-  
+.buttons button:hover{
+    background:#F97316;
+}
+
+/* ===========================
+   LOGOUT BUTTON
+=========================== */
+
+#homecontainer > button{
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    background:#F97316;
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#homecontainer > button:hover{
+    background:#EA580C;
+}

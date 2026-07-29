@@ -7,6 +7,15 @@ const [username, setUsername] = useState("");
 const [password, setPassword] = useState("");
 const [email, setEmail] = useState("");
 const [page, setPage] = useState("login");
+
+function handleLogin() {
+    if (username === "admin" && password === "1234") {
+      setPage("ADMINHOME");
+    } else {
+      alert("Invalid username or password.");
+    }
+  }
+
 return(
   <>
  
@@ -25,7 +34,7 @@ return(
  <br></br>
 <input type="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} />
  <br></br>
-<button onClick={() => setPage("ADMINHOME")}>LOGIN</button>
+<button onClick={handleLogin}>LOGIN</button>
 
  <br></br>
   <br></br>

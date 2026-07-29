@@ -8,7 +8,7 @@ const [password, setPassword] = useState("");
 const [email, setEmail] = useState("");
 return(
 <>
-<h1>Mic test 1 2 1 2 </h1>
+<h1>LEARN LOOP </h1>
 <label>Name</label><br></br>
 <input 
 type="text"

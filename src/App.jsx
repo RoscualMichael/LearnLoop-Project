@@ -8,6 +8,7 @@ const [password, setPassword] = useState("");
 const [email, setEmail] = useState("");
 const [page, setPage] = useState("login");
 
+
 function handleLogin() {
     if (username === "admin" && password === "1234") {
       setPage("ADMINHOME");
@@ -17,6 +18,7 @@ function handleLogin() {
   }
 
 return(
+  
   <>
  
  {page === "login" && (
@@ -34,11 +36,11 @@ return(
  <br></br>
 <input type="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} />
  <br></br>
-<button onClick={handleLogin}>LOGIN</button>
+<button onClick={handleLogin}>Login</button>
 
  <br></br>
   <br></br>
-<button onClick={() => setPage("register")}>REGISTER</button>
+<button onClick={() => setPage("register")}>Register</button>
 
   </div>
  )}
@@ -64,7 +66,9 @@ return(
 
  <br></br>
   <br></br>
-<button onClick={() => setPage("login")}>REGISTER</button>
+  <button onClick={() => setPage("login")}>Back to Login</button>
+  <br></br>
+<button onClick={() => setPage("login")}>Register</button>
   </div>
  )}
 
@@ -73,34 +77,60 @@ return(
   
 {page === "ADMINHOME" && (
   <div id="homecontainer">
+  <nav className="navbar">
+  <div className="logo">LearnLoop</div>
+
+  <input type="checkbox" id="menu-toggle" className="menu-toggle" />
+  <label htmlFor="menu-toggle" className="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <ul className="nav-links">
+    <li><a href="#">Dashboard</a></li>
+    <li><a href="#">User Management</a></li>
+    <li><a href="#">Skills Management</a></li>
+    <li><a href="#">Tutoring Sessions</a></li>
+    <li><a href="#">Ratings & Feedback</a></li>
+    <li><a href="#">Settings</a></li>
+    <li>
+      <button onClick={() => setPage("login")}>Log out</button>
+    </li>
+  </ul>
+</nav>
+<br></br>
     <h1>WELCOME TO ADMIN HOME PAGE</h1>
 
     <div className="cards">
       <div className="card">
         <h2>5</h2>
-        <p>Users</p>
+        <p>Total Users</p>
       </div>
 
       <div className="card">
         <h2>10</h2>
-        <p>Listings</p>
+        <p>Active Tutors</p>
       </div>
 
       <div className="card">
         <h2>3</h2>
-        <p>Reports</p>
+        <p>Active Tutoring Sessions</p>
       </div>
+
+      <div className="card">
+        <h2>3453</h2>
+        <p>Average User Rating</p>
+      </div>
+      
+    </div>
+        <div className="buttons">
+      <button>Users</button>
+      <button>Listings</button>
     </div>
 
-    <div className="buttons">
-      <button>Add User</button>
-      <button>View Listings</button>
-      <button>Reports</button>
-    </div>
 
-    <button onClick={() => setPage("login")}>
-      LOG OUT
-    </button>
+    
   </div>
 )}
   

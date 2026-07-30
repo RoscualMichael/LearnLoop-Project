@@ -46,9 +46,6 @@ return(
   </div>
  )}
 
- 
-
- 
  {page === "register" && (
 
 <div id="container">
@@ -73,9 +70,6 @@ return(
   </div>
  )}
 
-
-
-  
 {page === "ADMINHOME" && (
   <div id="homecontainer">
   <nav className="navbar">
@@ -137,11 +131,21 @@ return(
       <div className="logo">LearnLoop</div>
 
       <ul className="nav-links">
-        <li className="list"><a href="#">Browse</a></li>
-        <li className="list"><a href="#">Matches</a></li>
-        <li className="list"><a href="#">Exchanges</a></li>
-        <li className="list"><a href="#">Messages</a></li>
-        <li className="list"><a href="#">Profile</a></li>
+        <li className="list" onClick={() => setPage("USERHOME")}>
+          <a href="#">Browse</a>
+        </li>
+        <li className="list" onClick={() => setPage("MATCHES")}>
+          <a href="#">Matches</a>
+        </li>
+        <li className="list" onClick={() => setPage("EXCHANGES")}>
+          <a href="#">Exchanges</a>
+        </li>
+        <li className="list" onClick={() => setPage("MESSAGES")}>
+          <a href="#">Messages</a>
+        </li>
+        <li className="list" onClick={() => setPage("PROFILE")}>
+          <a href="#">Profile</a>
+        </li>
 
         <li>
           <button onClick={() => setPage("login")}>
@@ -187,46 +191,359 @@ return(
 
       </div>
 
-      <div className="post">
-
-        <div className="post-header">
-          <img
-            src="https://via.placeholder.com/50"
-            alt="Profile"
-          />
-
-          <div>
-            <h3>Marcus O.</h3>
-            <small>Yesterday</small>
-          </div>
-        </div>
-
-        <p><strong>Offers:</strong> Graphic Design</p>
-        <p><strong>Wants:</strong> React JS</p>
-
-        <p>
-          Looking for someone who can teach me React.
-          I can teach Photoshop and Illustrator.
-        </p>
-
-        <div className="post-actions">
-          <span>👍 8 Likes</span>
-          <span>💬 2 Comments</span>
-        </div>
-
-        <button className="exchange-btn">
-          Propose Exchange
-        </button>
-
-      </div>
-
     </div>
 
   </div>
 )}
+
+
+{page === "MATCHES" && (
+  <div id="userhome">
+
+    <nav className="navbar">
+
+      <div className="logo">LearnLoop</div>
+
+      <ul className="nav-links">
+
+  <li
+    className={`list ${page === "USERHOME" ? "active" : ""}`}
+    onClick={() => setPage("USERHOME")}
+  >
+    Browse
+  </li>
+
+  <li
+    className={`list ${page === "MATCHES" ? "active" : ""}`}
+    onClick={() => setPage("MATCHES")}
+  >
+    Matches
+  </li>
+
+  <li
+    className={`list ${page === "EXCHANGES" ? "active" : ""}`}
+    onClick={() => setPage("EXCHANGES")}
+  >
+    Exchanges
+  </li>
+
+  <li
+    className={`list ${page === "MESSAGES" ? "active" : ""}`}
+    onClick={() => setPage("MESSAGES")}
+  >
+    Messages
+  </li>
+
+  <li
+    className={`list ${page === "PROFILE" ? "active" : ""}`}
+    onClick={() => setPage("PROFILE")}
+  >
+    Profile
+  </li>
+
+  <li>
+    <button onClick={() => setPage("login")}>
+      Logout
+    </button>
+  </li>
+
+</ul>
 Sent
 Compose
 Write to
+
+
+    </nav>
+<h1>🤝 My Matches</h1>
+
+<div className="match-card">
+  <img src="https://via.placeholder.com/70" alt="" />
+
+  <div>
+    <h3>John Doe</h3>
+    <p>React ↔ Photoshop</p>
+    <small>Matched 2 days ago</small>
+  </div>
+
+  <button>Message</button>
+</div>
+
+<div className="match-card">
+  <img src="https://via.placeholder.com/70" alt="" />
+
+  <div>
+    <h3>Sarah Lee</h3>
+    <p>English ↔ Java</p>
+    <small>Matched Yesterday</small>
+  </div>
+
+  <button>Message</button>
+</div>
+    
+
+  </div>
+)}
+{page === "EXCHANGES" && (
+  <div id="userhome">
+
+    <nav className="navbar">
+
+      <div className="logo">LearnLoop</div>
+
+      <ul className="nav-links">
+
+  <li
+    className={`list ${page === "USERHOME" ? "active" : ""}`}
+    onClick={() => setPage("USERHOME")}
+  >
+    Browse
+  </li>
+
+  <li
+    className={`list ${page === "MATCHES" ? "active" : ""}`}
+    onClick={() => setPage("MATCHES")}
+  >
+    Matches
+  </li>
+
+  <li
+    className={`list ${page === "EXCHANGES" ? "active" : ""}`}
+    onClick={() => setPage("EXCHANGES")}
+  >
+    Exchanges
+  </li>
+
+  <li
+    className={`list ${page === "MESSAGES" ? "active" : ""}`}
+    onClick={() => setPage("MESSAGES")}
+  >
+    Messages
+  </li>
+
+  <li
+    className={`list ${page === "PROFILE" ? "active" : ""}`}
+    onClick={() => setPage("PROFILE")}
+  >
+    Profile
+  </li>
+
+  <li>
+    <button onClick={() => setPage("login")}>
+      Logout
+    </button>
+  </li>
+
+</ul>
+Sent
+Compose
+Write to
+
+
+    </nav>
+
+    <h1>📚 Exchange Requests</h1>
+
+<div className="exchange-card">
+  <h3>John Doe</h3>
+
+  <p>
+    Wants to learn: React
+  </p>
+
+  <p>
+    Offers: Photoshop
+  </p>
+
+  <button>Accept</button>
+  <button>Decline</button>
+
+</div>
+
+<div className="exchange-card">
+  <h3>Maria Cruz</h3>
+
+  <p>
+    Wants to learn: English
+  </p>
+
+  <p>
+    Offers: Graphic Design
+  </p>
+
+  <button>Accept</button>
+  <button>Decline</button>
+
+</div>
+
+
+  </div>
+)}
+{page === "MESSAGES" && (
+  <div id="userhome">
+
+    <nav className="navbar">
+
+      <div className="logo">LearnLoop</div>
+
+      <ul className="nav-links">
+
+  <li
+    className={`list ${page === "USERHOME" ? "active" : ""}`}
+    onClick={() => setPage("USERHOME")}
+  >
+    Browse
+  </li>
+
+  <li
+    className={`list ${page === "MATCHES" ? "active" : ""}`}
+    onClick={() => setPage("MATCHES")}
+  >
+    Matches
+  </li>
+
+  <li
+    className={`list ${page === "EXCHANGES" ? "active" : ""}`}
+    onClick={() => setPage("EXCHANGES")}
+  >
+    Exchanges
+  </li>
+
+  <li
+    className={`list ${page === "MESSAGES" ? "active" : ""}`}
+    onClick={() => setPage("MESSAGES")}
+  >
+    Messages
+  </li>
+
+  <li
+    className={`list ${page === "PROFILE" ? "active" : ""}`}
+    onClick={() => setPage("PROFILE")}
+  >
+    Profile
+  </li>
+
+  <li>
+    <button onClick={() => setPage("login")}>
+      Logout
+    </button>
+  </li>
+
+</ul>
+Sent
+Compose
+Write to
+
+
+    </nav>
+
+    <h1>💬 Messages</h1>
+
+<div className="message-card">
+  <img src="https://via.placeholder.com/60" alt="" />
+
+  <div>
+    <h3>John Doe</h3>
+    <p>See you tomorrow at 7 PM!</p>
+  </div>
+</div>
+
+<div className="message-card">
+  <img src="https://via.placeholder.com/60" alt="" />
+
+  <div>
+    <h3>Sarah Lee</h3>
+    <p>Thanks for today's lesson.</p>
+  </div>
+</div>
+Sent
+Compose
+Write to
+
+
+  </div>
+)}
+{page === "PROFILE" && (
+  <div id="userhome">
+
+    <nav className="navbar">
+
+      <div className="logo">LearnLoop</div>
+
+      <ul className="nav-links">
+
+  <li
+    className={`list ${page === "USERHOME" ? "active" : ""}`}
+    onClick={() => setPage("USERHOME")}
+  >
+    Browse
+  </li>
+
+  <li
+    className={`list ${page === "MATCHES" ? "active" : ""}`}
+    onClick={() => setPage("MATCHES")}
+  >
+    Matches
+  </li>
+
+  <li
+    className={`list ${page === "EXCHANGES" ? "active" : ""}`}
+    onClick={() => setPage("EXCHANGES")}
+  >
+    Exchanges
+  </li>
+
+  <li
+    className={`list ${page === "MESSAGES" ? "active" : ""}`}
+    onClick={() => setPage("MESSAGES")}
+  >
+    Messages
+  </li>
+
+  <li
+    className={`list ${page === "PROFILE" ? "active" : ""}`}
+    onClick={() => setPage("PROFILE")}
+  >
+    Profile
+  </li>
+
+  <li>
+    <button onClick={() => setPage("login")}>
+      Logout
+    </button>
+  </li>
+
+</ul>
+Sent
+Compose
+Write to
+
+
+    </nav>
+
+    <h1>👤 My Profile</h1>
+
+<div className="profile-card">
+
+  <img src="https://via.placeholder.com/120" alt="" />
+
+  <h2>Harold Caño</h2>
+
+  <p>⭐ 4.9 Rating</p>
+
+  <p><strong>Can Teach:</strong> Graphic Design</p>
+
+  <p><strong>Want to Learn:</strong> React JS</p>
+
+  <button>Edit Profile</button>
+
+</div>
+Sent
+Compose
+Write to
+
+
+  </div>
+)}
 
 </>
 )

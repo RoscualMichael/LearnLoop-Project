@@ -3,3 +3,194 @@
   color: aquamarine;
   background-color: pink;
 }
+
+/* =========================
+   MATCHES
+========================= */
+
+.match-card{
+    background:#fff;
+    width:700px;
+    margin:20px auto;
+    padding:20px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.match-card img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    border:3px solid #ff8c00;
+}
+
+.match-card h3{
+    margin:0;
+    color:#222;
+}
+
+.match-card p{
+    margin:5px 0;
+    color:#666;
+}
+
+.match-card button{
+    background:#ff8c00;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.match-card button:hover{
+    background:#e67e00;
+}
+
+/* =========================
+   EXCHANGES
+========================= */
+
+.exchange-card{
+    background:#fff;
+    width:700px;
+    margin:20px auto;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.exchange-card h3{
+    color:#222;
+}
+
+.exchange-card p{
+    color:#555;
+}
+
+.exchange-card button{
+    margin-right:10px;
+    margin-top:15px;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.exchange-card button:first-of-type{
+    background:#ff8c00;
+    color:white;
+}
+
+.exchange-card button:last-of-type{
+    background:#ddd;
+}
+
+.exchange-card button:hover{
+    opacity:.9;
+}
+
+/* =========================
+   MESSAGES
+========================= */
+
+.message-card{
+    background:#fff;
+    width:700px;
+    margin:20px auto;
+    padding:15px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.message-card:hover{
+    transform:translateY(-2px);
+}
+
+.message-card img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    border:3px solid #ff8c00;
+}
+
+.message-card h3{
+    margin:0;
+}
+
+.message-card p{
+    margin-top:5px;
+    color:#666;
+}
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-card{
+    background:#fff;
+    width:500px;
+    margin:40px auto;
+    text-align:center;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.profile-card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:4px solid #ff8c00;
+    margin-bottom:15px;
+}
+
+.profile-card h2{
+    margin-bottom:10px;
+}
+
+.profile-card p{
+    color:#555;
+    margin:8px 0;
+}
+
+.profile-card button{
+    margin-top:20px;
+    background:#ff8c00;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.profile-card button:hover{
+    background:#e67e00;
+}
+.list{
+    list-style:none;
+    cursor:pointer;
+    padding:10px 15px;
+    font-weight:600;
+    color:#333;
+    border-bottom:3px solid transparent;
+    transition:0.3s;
+}
+
+.list:hover{
+    color:#ff8c00;
+    border-bottom:3px solid #ff8c00;
+}
+
+.list.active{
+    color:#ff8c00;
+    border-bottom:3px solid #ff8c00;
+}

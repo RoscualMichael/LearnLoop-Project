@@ -244,3 +244,152 @@ background: #EA580C;
     display: flex;
   }
 }
+.nav-links > :hover{
+ text-decoration: underline solid orange 3px;
+  border-radius: 10px;
+}
+
+
+/* USER HOME */
+#userhome{
+    background:#f5f5f5;
+    min-height:100vh;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+.navbar{
+    background:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#ff8c00;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#ff8c00;
+}
+
+.nav-links button{
+    background:#ff8c00;
+    color:#fff;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.nav-links button:hover{
+    background:#e67e00;
+}
+
+/* FEED */
+.feed{
+    width:700px;
+    margin:30px auto;
+}
+
+/* POST */
+.post{
+    background:#fff;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.post-header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.post-header img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    border:2px solid #ff8c00;
+}
+
+.post-header h3{
+    margin:0;
+    color:#222;
+}
+
+.post-header small{
+    color:gray;
+}
+
+.post p{
+    line-height:1.7;
+    color:#444;
+}
+
+/* LIKE & COMMENT */
+
+.post-actions{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    padding-top:12px;
+    border-top:1px solid #ddd;
+}
+
+.post-actions span{
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+    color:#444;
+    font-weight:500;
+}
+
+.post-actions span:hover{
+    background:#ff8c00;
+    color:white;
+}
+
+
+/* BUTTON */
+.exchange-btn{
+    width:100%;
+    margin-top:18px;
+    background:#ff8c00;
+    color:#fff;
+    border:none;
+    padding:12px;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.exchange-btn:hover{
+    background:#e67e00;
+}
+Sent
+Compose
+Write to

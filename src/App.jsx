@@ -1,4 +1,4 @@
-
+//MGA INPORTS
 import { useState } from "react";
 import "./App.css";
 
@@ -10,13 +10,14 @@ const [page, setPage] = useState("login");
 
 
 function handleLogin() {
-    if (username === "admin" && password === "1234") {
-      setPage("ADMINHOME");
-    } else {
-      alert("Invalid username or password.");
-    }
+  if (username === "admin" && password === "1234") {
+    setPage("ADMINHOME");
+  } else if (username === "user" && password === "1234") {
+    setPage("USERHOME");
+  } else {
+    alert("Invalid username or password.");
   }
-
+}
 return(
   
   <>
@@ -88,21 +89,21 @@ return(
   </label>
 
   <ul className="nav-links">
-    <li><a href="#">Dashboard</a></li>
-    <li><a href="#">User Management</a></li>
-    <li><a href="#">Skills Management</a></li>
-    <li><a href="#">Tutoring Sessions</a></li>
-    <li><a href="#">Ratings & Feedback</a></li>
-    <li><a href="#">Settings</a></li>
+    <li className="list"><a href="#">Dashboard</a></li>
+    <li className="list"><a href="#">User Management</a></li>
+    <li className="list"><a href="#">Listings</a></li>
+    <li className="list"><a href="#">Reports</a></li>
+    <li className="list"><a href="#">Settings</a></li>
     <li>
       <button onClick={() => setPage("login")}>Log out</button>
     </li>
   </ul>
 </nav>
 <br></br>
-    <h1>WELCOME TO ADMIN HOME PAGE</h1>
+    <h1>DASHBOARD</h1>
 
     <div className="cards">
+      
       <div className="card">
         <h2>5</h2>
         <p>Total Users</p>
@@ -124,19 +125,108 @@ return(
       </div>
       
     </div>
-        <div className="buttons">
-      <button>Users</button>
-      <button>Listings</button>
-    </div>
 
-
-    
   </div>
 )}
   
+{page === "USERHOME" && (
+  <div id="userhome">
 
- 
+    <nav className="navbar">
 
+      <div className="logo">LearnLoop</div>
+
+      <ul className="nav-links">
+        <li className="list"><a href="#">Browse</a></li>
+        <li className="list"><a href="#">Matches</a></li>
+        <li className="list"><a href="#">Exchanges</a></li>
+        <li className="list"><a href="#">Messages</a></li>
+        <li className="list"><a href="#">Profile</a></li>
+
+        <li>
+          <button onClick={() => setPage("login")}>
+            Logout
+          </button>
+        </li>
+      </ul>
+
+    </nav>
+
+    <div className="feed">
+
+      <div className="post">
+
+        <div className="post-header">
+          <img
+            src="https://via.placeholder.com/50"
+            alt="Profile"
+          />
+
+          <div>
+            <h3>Priya N.</h3>
+            <small>2 hours ago</small>
+          </div>
+        </div>
+
+        <p><strong>Offers:</strong> Conversational Spanish</p>
+        <p><strong>Wants:</strong> Intro to Python</p>
+
+        <p>
+          Weekly 30-minute chats. I'll help you improve
+          your Spanish while you teach me Python.
+        </p>
+
+        <div className="post-actions">
+          <span>👍 12 Likes</span>
+          <span>💬 4 Comments</span>
+        </div>
+
+        <button className="exchange-btn">
+          Propose Exchange
+        </button>
+
+      </div>
+
+      <div className="post">
+
+        <div className="post-header">
+          <img
+            src="https://via.placeholder.com/50"
+            alt="Profile"
+          />
+
+          <div>
+            <h3>Marcus O.</h3>
+            <small>Yesterday</small>
+          </div>
+        </div>
+
+        <p><strong>Offers:</strong> Graphic Design</p>
+        <p><strong>Wants:</strong> React JS</p>
+
+        <p>
+          Looking for someone who can teach me React.
+          I can teach Photoshop and Illustrator.
+        </p>
+
+        <div className="post-actions">
+          <span>👍 8 Likes</span>
+          <span>💬 2 Comments</span>
+        </div>
+
+        <button className="exchange-btn">
+          Propose Exchange
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+)}
+Sent
+Compose
+Write to
 
 </>
 )

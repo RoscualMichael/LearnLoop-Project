@@ -1,4 +1,5 @@
 //MGA INPORTS
+
 import { useState } from "react";
 import "./App.css";
 
@@ -43,6 +44,13 @@ return(
   <br></br>
 <button onClick={() => setPage("register")}>Register</button>
 
+<p className="forgot">
+  <span onClick={() => setPage("FORGOTPASSWORD")}>
+    Forgot Password?
+  </span>
+</p>
+
+
   </div>
  )}
 
@@ -72,56 +80,149 @@ return(
 
 {page === "ADMINHOME" && (
   <div id="homecontainer">
-  <nav className="navbar">
-  <div className="logo">LearnLoop</div>
 
-  <input type="checkbox" id="menu-toggle" className="menu-toggle" />
-  <label htmlFor="menu-toggle" className="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
+    <nav className="navbar">
+      <div className="logo">LearnLoop</div>
 
-  <ul className="nav-links">
-    <li className="list"><a href="#">Dashboard</a></li>
-    <li className="list"><a href="#">User Management</a></li>
-    <li className="list"><a href="#">Listings</a></li>
-    <li className="list"><a href="#">Reports</a></li>
-    <li className="list"><a href="#">Settings</a></li>
-    <li>
-      <button onClick={() => setPage("login")}>Log out</button>
-    </li>
-  </ul>
-</nav>
-<br></br>
+      <input type="checkbox" id="menu-toggle" className="menu-toggle" />
+      <label htmlFor="menu-toggle" className="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul className="nav-links">
+        <li className="list"><a href="#">Dashboard</a></li>
+        <li className="list"><a href="#">User Management</a></li>
+        <li className="list"><a href="#">Listings</a></li>
+        <li className="list"><a href="#">Reports</a></li>
+        <li className="list"><a href="#">Settings</a></li>
+
+        <li>
+          <button onClick={() => setPage("login")}>
+            Log Out
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <br />
+
     <h1>DASHBOARD</h1>
 
     <div className="cards">
-      
+
       <div className="card">
-        <h2>5</h2>
+        <h2>125</h2>
         <p>Total Users</p>
       </div>
 
       <div className="card">
-        <h2>10</h2>
+        <h2>34</h2>
         <p>Active Tutors</p>
       </div>
 
       <div className="card">
-        <h2>3</h2>
-        <p>Active Tutoring Sessions</p>
+        <h2>67</h2>
+        <p>Active Learners</p>
       </div>
 
       <div className="card">
-        <h2>3453</h2>
+        <h2>12</h2>
+        <p>Active Sessions</p>
+      </div>
+
+      <div className="card">
+        <h2>18</h2>
+        <p>Pending Requests</p>
+      </div>
+
+      <div className="card">
+        <h2>53</h2>
+        <p>Total Listings</p>
+      </div>
+
+      <div className="card">
+        <h2>6</h2>
+        <p>Pending Reports</p>
+      </div>
+
+      <div className="card">
+        <h2>4.8 ⭐</h2>
         <p>Average User Rating</p>
       </div>
-      
+
+    </div>
+
+    {/* Recent Activity */}
+
+    <div className="dashboard-section">
+      <h2>Recent Activity</h2>
+
+      <ul className="activity-list">
+        <li>✅ Harold registered as a new user.</li>
+        <li>📚 Maria started a tutoring session.</li>
+        <li>🔄 Exchange request accepted.</li>
+        <li>🚩 A listing was reported.</li>
+        <li>⭐ New rating submitted.</li>
+      </ul>
+    </div>
+
+    {/* Pending Reports */}
+
+    <div className="dashboard-section">
+      <h2>Pending Reports</h2>
+
+      <table className="admin-table">
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Reason</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>John</td>
+            <td>Spam Listing</td>
+            <td>Pending</td>
+            <td><button>View</button></td>
+          </tr>
+
+          <tr>
+            <td>Maria</td>
+            <td>Inappropriate Message</td>
+            <td>Pending</td>
+            <td><button>View</button></td>
+          </tr>
+
+          <tr>
+            <td>Kevin</td>
+            <td>Fake Account</td>
+            <td>Pending</td>
+            <td><button>View</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    {/* Top Tutors */}
+
+    <div className="dashboard-section">
+      <h2>Top Rated Tutors</h2>
+
+      <ol className="top-list">
+        <li>Anna ⭐⭐⭐⭐⭐</li>
+        <li>Michael ⭐⭐⭐⭐☆</li>
+        <li>Sophia ⭐⭐⭐⭐☆</li>
+      </ol>
     </div>
 
   </div>
 )}
+
   
 {page === "USERHOME" && (
   <div id="userhome">
@@ -542,6 +643,29 @@ Compose
 Write to
 
 
+  </div>
+)}
+
+{page === "FORGOTPASSWORD" && (
+  <div id="forgot-container">
+    <div className="forgot-card">
+      <h2>Forgot Password</h2>
+      <p>Enter your email address to receive a password reset link.</p>
+
+      <input
+        type="email"
+        placeholder="Enter your email"
+      />
+
+      <button>Send Reset Link</button>
+
+      <p
+        className="back-login"
+        onClick={() => setPage("login")}
+      >
+        ← Back to Login
+      </p>
+    </div>
   </div>
 )}
 

@@ -194,3 +194,57 @@
     color:#ff8c00;
     border-bottom:3px solid #ff8c00;
 }
+
+
+.dashboard-section{
+    margin-top:40px;
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.activity-list{
+    padding-left:20px;
+}
+
+.activity-list li{
+    margin:10px 0;
+}
+
+.admin-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.admin-table th,
+.admin-table td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+    text-align:left;
+}
+
+.admin-table th{
+    background:#f5f5f5;
+}
+
+.admin-table button{
+    background:orange;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.admin-table button:hover{
+    background:#ff8c00;
+}
+
+.top-list{
+    padding-left:25px;
+}
+
+.top-list li{
+    margin:10px 0;
+}

@@ -349,9 +349,7 @@ return(
   </li>
 
 </ul>
-Sent
-Compose
-Write to
+
 
 
     </nav>
@@ -361,7 +359,7 @@ Write to
   <img src="https://via.placeholder.com/70" alt="" />
 
   <div>
-    <h3>John Doe</h3>
+    <h3>Harold Caño</h3>
     <p>React ↔ Photoshop</p>
     <small>Matched 2 days ago</small>
   </div>
@@ -373,7 +371,7 @@ Write to
   <img src="https://via.placeholder.com/70" alt="" />
 
   <div>
-    <h3>Sarah Lee</h3>
+    <h3>Nick Tabada</h3>
     <p>English ↔ Java</p>
     <small>Matched Yesterday</small>
   </div>
@@ -435,9 +433,7 @@ Write to
   </li>
 
 </ul>
-Sent
-Compose
-Write to
+
 
 
     </nav>
@@ -530,9 +526,7 @@ Write to
   </li>
 
 </ul>
-Sent
-Compose
-Write to
+
 
 
     </nav>
@@ -556,9 +550,7 @@ Write to
     <p>Thanks for today's lesson.</p>
   </div>
 </div>
-Sent
-Compose
-Write to
+
 
 
   </div>
@@ -614,9 +606,6 @@ Write to
   </li>
 
 </ul>
-Sent
-Compose
-Write to
 
 
     </nav>
@@ -638,9 +627,7 @@ Write to
   <button>Edit Profile</button>
 
 </div>
-Sent
-Compose
-Write to
+
 
 
   </div>

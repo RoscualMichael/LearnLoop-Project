@@ -228,9 +228,17 @@ return(
   <div id="userhome">
 
     <nav className="navbar">
+    
 
       <div className="logo">LearnLoop</div>
+      <input type="checkbox" id="menu-toggle" className="menu-toggle" />
+      <label htmlFor="menu-toggle" className="hamburger">
 
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      
       <ul className="nav-links">
         <li className="list" onClick={() => setPage("USERHOME")}>
           <a href="#">Browse</a>

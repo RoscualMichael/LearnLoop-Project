@@ -313,6 +313,7 @@ input{
     position:sticky;
     top:0;
     z-index:100;
+
 }
 
 .logo{
@@ -382,10 +383,10 @@ input{
    RESPONSIVE NAVBAR
 =================================================== */
 
-@media(max-width:768px){
+@media(max-width:1024px){
 
     .navbar{
-        padding:15px 20px;
+        padding:15px 30px;
     }
 
     .hamburger{

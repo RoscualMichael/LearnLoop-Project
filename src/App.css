@@ -9,7 +9,7 @@
     --gray:#6B7280;
     --light:#F3F4F6;
     --white:#FFFFFF;
-    --shadow:0 8px 20px rgba(0,0,0,.15);
+    --shadow:0 8px 20px rgba(44, 43, 43, 0.15);
     --radius:12px;
 }
 
@@ -223,13 +223,13 @@ input{
     background:var(--white);
     padding:25px;
     border-radius:15px;
-    box-shadow:0 5px 15px rgba(39, 37, 37, 0.12);
+    box-shadow:0 5px 15px rgba(44, 43, 43, 0.15);
     transition:.3s ease;
 }
 
 .card:hover{
     transform:translateY(-6px);
-    box-shadow:0 12px 25px rgba(0,0,0,.18);
+    box-shadow:0 12px 25px rgba(44, 43, 43, 0.15);
 }
 
 .card h2{
@@ -309,7 +309,7 @@ input{
     align-items:center;
     padding:15px 40px;
     border-radius:12px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    box-shadow:0 4px 15px rgba(44, 43, 43, 0.15);
     position:sticky;
     top:0;
     z-index:100;
@@ -403,7 +403,7 @@ input{
         flex-direction:column;
         padding:20px;
         border-radius:12px;
-        box-shadow:0 8px 20px rgba(0,0,0,.15);
+        box-shadow:0 8px 20px rgba(44, 43, 43, 0.15);
     }
 
     .menu-toggle:checked ~ .nav-links{
@@ -430,14 +430,14 @@ input{
     border-radius:15px;
     padding:20px;
     margin-bottom:25px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    box-shadow:0 5px 15px rgba(44, 43, 43, 0.15);
     transition:.3s ease;
     animation:fadeIn .5s ease;
 }
 
 .post:hover{
     transform:translateY(-4px);
-    box-shadow:0 12px 25px rgba(0,0,0,.12);
+    box-shadow:0 12px 25px rgba(44, 43, 43, 0.15);
 }
 
 /* ===================================================
